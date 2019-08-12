@@ -12,9 +12,9 @@
 #
 # Ecrit par : Maxence Bertellin
 # Date de création : 30/07/2019
-# Dernière modification : 09/08/2019 
+# Dernière modification : 12/08/2019 
 # Testé avec : Python 3
-# Script Revision: 0.8
+# Script Revision: 0.9
 #
 # ###############################################################################################
 #
@@ -71,24 +71,21 @@ print("")
 
 ######## Contrôle de l'espace disque du poste local ########
 print("          ##### Contrôle de l'espace disque #####")
-# Attribution de la fonction getpydf à la variable DISK_ROOT :
-DISK_ROOT = getpydf()
-
-DISK_ROOT_SPACE = int(DISK_ROOT[3][4:-1])
+# Récupération, de la variable espace disque libre :
+DISK_ROOT_SPACE = "%d" % (free // (2**20))
 # Affichage de la quantité de stockage restant sur le disque "/" :
-print("Espace libre : " + str(DISK_ROOT_SPACE) + " Mo")
+print("Espace libre : " + DISK_ROOT_SPACE + " Mo")
 # Si l'espace disque est supérieur ou égal à 2Go :
-if DISK_ROOT_SPACE >= 2000 :
+if int(DISK_ROOT_SPACE) >= MINIMUM_SPACE_DISK_REQUIRED :
   # On continue, et on l'indique
   print("L'espace disque est suffisant pour effectuer la sauvegarde.")
 # Si l'espace disque est inférieur à 2Go :
-elif str(DISK_ROOT_SPACE) < str(2000) :
+elif int(DISK_ROOT_SPACE) < MINIMUM_SPACE_DISK_REQUIRED :
   # On l'indique et on ferme le programme
   print("L'espace disque est insuffisant pour effectuer la sauvegarde ;")
   print("Laisser au moins 2 Go d'espace libre puis relancer le programme.")
   exit()
 print("")
-
 
 
 ##### Sauvegarde de la/des Base(s) de données #####

@@ -8,25 +8,13 @@ import subprocess, readline
 from os.path import basename, splitext
 
 
-#### FONCTIONS ####
-def getpydf():
-    df = os.popen("pydf -h /")
-    i = 0
-    while True:
-        i = i + 1
-        line = df.readline()
-        if i==2:
-            return(line.split())
-
-
-
 ### VARIABLES A PERSONNALISER ###
 # Pour sauvegarder plusieurs bases de données en même temps, créer un fichier 
 # /repertoire/dbnameslist.txt', inscriver sur chaque ligne le nom de la BDD à sauvegarder,
 # puis assigner le fichier à la variable DB_NAME 
 # DB_NAME = '/backup/dbnameslist.txt'
 
-# Nom de lBDD à sauvegarder :
+# Nom de la BDD à sauvegarder :
 DB_NAME = 'wordpress'
 # Nom du poste sur lequel est la BDD :
 DB_HOST = 'localhost' 
@@ -45,3 +33,7 @@ FILE1 = "/etc/apache2"
 FILE2 = "/var/www"
 # Nom du chemin dans lequel on va copier l'archive :
 BACKUP_PATH = '/backup'
+# Récuperation des données espace disque sur "/" :
+total, used, free = shutil.disk_usage("/")
+# Espace disque minimal requis (en Mo) :
+MINIMUM_SPACE_DISK_REQUIRED = 2000
