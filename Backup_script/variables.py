@@ -9,9 +9,9 @@ from os.path import basename, splitext
 
 
 ### VARIABLES A PERSONNALISER ###
-# Pour sauvegarder plusieurs bases de données en même temps, créer un fichier 
-# /repertoire/dbnameslist.txt', inscriver sur chaque ligne le nom de la BDD à sauvegarder,
-# puis assigner le fichier à la variable DB_NAME 
+# Pour sauvegarder plusieurs bases de données en même temps, créez un fichier 
+# /repertoire/dbnameslist.txt', inscrivez sur chaque ligne le nom de la BDD à sauvegarder,
+# puis assignez le fichier à la variable DB_NAME 
 # DB_NAME = '/backup/dbnameslist.txt'
 
 # Nom de la BDD à sauvegarder :

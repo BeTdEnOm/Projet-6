@@ -4,8 +4,8 @@
 # ###############################################################################################
 #
 # Ce script Python à été créé afin d'effectuer des sauvegardes de manières automatisé et simple, 
-# d'un site web (configuration du serveur web), et de sa base de données ; en rentrant les noms
-# des variables dans le fichier variables.py ... 
+# d'un site web (configuration du serveur web et contenu du site), et de sa base de données ; 
+# en rentrant les noms des variables dans le fichier variables.py ... 
 # Ce fichier ne doit être accessible en droit que pour le créateur/modificateur dudit fichier, 
 # et pour le script, car celui-ci contient les informations de connexion à MYSQL.
 #
