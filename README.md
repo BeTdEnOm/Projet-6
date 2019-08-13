@@ -9,6 +9,7 @@ en rentrant les noms des variables dans le fichier variables.py ...
 Ce fichier ne doit être accessible en droit que pour le créateur/modificateur dudit fichier, 
 et pour le script, car celui-ci contient les informations de connexion à MYSQL.
 
+
 Pour l'utiliser, remplissez le fichier variables.py avec vos propres variables, puis éxecuter 
 le script.
 
@@ -25,8 +26,10 @@ ce que le script renvoie dans le terminal :
 
 => 20 03 * * * root save_script.py
 
+
 Ce script est sous licence GNU GENERAL PUBLIC LICENSE (version 3, 29 juin 2007) et sous licence
 CeCILL (version 2.1, 21 juin 2013)
+
 
 Ecrit par : Maxence Bertellin
 
@@ -35,4 +38,5 @@ Date de création : 30/07/2019
 Dernière modification : 13/08/2019 
 
 Testé avec : Python 3
+
 Script Revision: 1.0
