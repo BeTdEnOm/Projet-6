@@ -2,6 +2,10 @@
 # Sauvegarder un site et sa configuration automatiquement
 
 
+Ce script est sous licence GNU GENERAL PUBLIC LICENSE (version 3, 29 juin 2007) et sous licence
+CeCILL (version 2.1, 21 juin 2013)
+
+
 Ce script Python à été créé afin d'effectuer des sauvegardes de manières automatisé et simple, 
 d'un site web (configuration du serveur web et contenu du site), et de sa base de données ; 
 en rentrant les noms des variables dans le fichier variables.py ... 
@@ -24,11 +28,8 @@ Pour que le script s'éxecute tous les jours à 03h20 :
 Vous pouvez également ajouter un fichier de log à votre tâche Cron, vous donnant ainsi accès à
 ce que le script renvoie dans le terminal :
 
-=> 20 03 * * * root save_script.py
+=> 20 03 * * * root save_script.py &>> /var/log/save-script.log
 
-
-Ce script est sous licence GNU GENERAL PUBLIC LICENSE (version 3, 29 juin 2007) et sous licence
-CeCILL (version 2.1, 21 juin 2013)
 
 
 Ecrit par : Maxence Bertellin
