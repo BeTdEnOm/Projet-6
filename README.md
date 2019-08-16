@@ -56,6 +56,8 @@ Dans le cas ou le script ne fonctionnerait pas, vous pouvez déterminer le probl
 
 (11) : La commande de sauvegarde de BDD de MySQL ne fonctionne pas.
 
+(12) : Erreur lors de la création de l'archive.
+
 
 Ecrit par : Maxence Bertellin
 
