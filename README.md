@@ -31,17 +31,29 @@ ce que le script renvoie dans le terminal :
 
 
 Dans le cas ou le script ne fonctionnerait pas, vous pouvez déterminer le problème grâce à son code erreur (echo $?) :
+
 (0) : Le script s'est déroulé sans erreur.
+
 (1) : Le script ne s'est pas bien déroulé, mais l'erreur n'est pas répertoriée... bon courage !
+
 (2) : L'installation du paquet de la variable PACKAGE ne s'est pas déroulé correctement.
+
 (3) : L'installation du paquet de la variable PYTHON_PACKAGE ne s'est pas déroulé correctement.
+
 (4) : Erreur liée au nom de la base de donnée.
+
 (5) : Erreur liée au nom du poste à joindre (MySQL).
+
 (6) : Erreur liée au nom d'utilisateur ou au mot de passe MySQL.
+
 (7) : Erreur lors de l'accès à MySQL (possibilité de service offline).
+
 (8) : Erreur lié au chemin indiqué dans la variable FILE1.
+
 (9) : Erreur lié au chemin indiqué dans la variable FILE2.
+
 (10) : Erreur lié à l'espace disque.
+
 (11) : La commande de sauvegarde de BDD de MySQL ne fonctionne pas.
 
 
