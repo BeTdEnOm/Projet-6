@@ -13,14 +13,14 @@ Ce fichier ne doit être accessible en droit que pour le créateur/modificateur 
 et pour le script, car celui-ci contient les informations de connexion à MYSQL.
 
 
-Pour l'utiliser, remplissez le fichier variables.py avec vos propres variables, puis éxecuter 
+Pour l'utiliser, remplissez le fichier variables.py avec vos propres variables, puis exécuter 
 le script.
 
 Pour une utilisation manuelle, mettez vous dans le dossier du script puis : ./save_script.py 
 
 Pour une utilisation automatisée, ajouter une tâche Cron (crontab -e), exemple: 
 
-Pour que le script s'éxecute tous les jours à 03h20 :
+Pour que le script s'exécute tous les jours à 03h20 :
 
 => 20 03 * * * root save_script.py
 
@@ -35,22 +35,15 @@ Dans le cas ou le script ne fonctionnerait pas, vous pouvez déterminer le probl
 (1) : Le script ne s'est pas bien déroulé, mais l'erreur n'est pas répertoriée... bon courage !
 (2) : L'installation du paquet de la variable PACKAGE ne s'est pas déroulé correctement.
 (3) : L'installation du paquet de la variable PYTHON_PACKAGE ne s'est pas déroulé correctement.
-(11) : La commande 
-(4) : 
-(5) : 
-(6) : 
-(7) : 
-(8) : 
-(9) : 
-(10) : 
+(4) : Erreur liée au nom de la base de donnée.
+(5) : Erreur liée au nom du poste à joindre (MySQL).
+(6) : Erreur liée au nom d'utilisateur ou au mot de passe MySQL.
+(7) : Erreur lors de l'accès à MySQL (possibilité de service offline).
+(8) : Erreur lié au chemin indiqué dans la variable FILE1.
+(9) : Erreur lié au chemin indiqué dans la variable FILE2.
+(10) : Erreur lié à l'espace disque.
+(11) : La commande de sauvegarde de BDD de MySQL ne fonctionne pas.
 
-(12) : 
-(0) :
-(0) :
-(0) :
-(0) :
-(0) :
-(0) :
 
 Ecrit par : Maxence Bertellin
 
