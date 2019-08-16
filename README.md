@@ -8,8 +8,7 @@ CeCILL (version 2.1, 21 juin 2013)
 
 Ce script Python à été créé afin d'effectuer des sauvegardes de manières automatisé et simple, 
 d'un site web (configuration du serveur web et contenu du site), et de sa base de données ; 
-en rentrant les noms des variables dans le fichier variables.py ... 
-
+en rentrant les noms des variables dans le fichier variables.py.
 Ce fichier ne doit être accessible en droit que pour le créateur/modificateur dudit fichier, 
 et pour le script, car celui-ci contient les informations de connexion à MYSQL.
 
@@ -31,6 +30,27 @@ ce que le script renvoie dans le terminal :
 => 20 03 * * * root save_script.py &>> /var/log/save-script.log
 
 
+Dans le cas ou le script ne fonctionnerait pas, vous pouvez déterminer le problème grâce à son code erreur (echo $?) :
+(0) : Le script s'est déroulé sans erreur.
+(1) : Le script ne s'est pas bien déroulé, mais l'erreur n'est pas répertoriée... bon courage !
+(2) : L'installation du paquet de la variable PACKAGE ne s'est pas déroulé correctement.
+(3) : L'installation du paquet de la variable PYTHON_PACKAGE ne s'est pas déroulé correctement.
+(11) : La commande 
+(4) : 
+(5) : 
+(6) : 
+(7) : 
+(8) : 
+(9) : 
+(10) : 
+
+(12) : 
+(0) :
+(0) :
+(0) :
+(0) :
+(0) :
+(0) :
 
 Ecrit par : Maxence Bertellin
 
