@@ -25,7 +25,7 @@ Pour que le script s'exécute tous les jours à 03h20 :
 => 20 03 * * * root save_script.py
 
 Vous pouvez également ajouter un fichier de log à votre tâche Cron, vous donnant ainsi accès à
-ce que le script renvoie dans le terminal :
+ce que le script renvoie dans le terminal, avec son code erreur en fin de log :
 
 => 20 03 * * * root save_script.py &>> /var/log/save-script.log
 
