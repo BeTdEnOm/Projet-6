@@ -29,7 +29,7 @@
 # Pour que le script s'exécute tous les jours à 03h20 :
 # => 20 03 * * * /backup/save_script.py
 # Vous pouvez également ajouter un fichier de log à votre tâche Cron, vous donnant ainsi accès à
-# ce que le script renvoie dans le terminal :
+# ce que le script renvoie dans le terminal, avec son code erreur en fin de log :
 # => 20 03 * * * * /backup/save_script.py &>> /backup/save_script.log
 #
 # ###############################################################################################
@@ -65,7 +65,28 @@
 import datetime, os, re, tarfile, shutil
 import os.path
 import readline
+import mysql.connector
+from mysql.connector import Error
+
 from variables import *
+
+
+
+### FONCTION ###
+
+# Définition de la fonction CONNECT :
+def CONNECT():
+  # On essaie de se connecter à MySQL avec les infos de variables.py :
+  try:
+    conn = mysql.connector.connect(host=DB_HOST,database=DB_NAME,user=DB_USER,password=DB_USER_PASSWORD)
+    conn.is_connected()
+    conn.close()
+    # Si ca fonctionne on retourne True comme résultat :
+    return(True)
+  # En exception, on attribut les erreurs à la variable ERROR :
+  except Error as ERROR:
+    # On retourne l'erreur en question :
+    return(ERROR)
 
 
 

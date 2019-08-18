@@ -18,8 +18,7 @@
 
 
 ### IMPORT NÉCESSAIRE AUX VARIABLES ###
-import datetime, shutil, mysql.connector
-from mysql.connector import Error
+import datetime, shutil
 
 
 ### VARIABLES A PERSONNALISER ###
@@ -60,23 +59,3 @@ MINIMUM_SPACE_DISK_REQUIRED = 2000
 ### PAQUETS NÉCESSAIRES AU SCRIPT ###
 PACKAGE = "python3-mysqldb"
 PYTHON_PACKAGE = "mysql.connector-python"
-
-
-
-### FONCTION ###
-
-# Définition de la fonction CONNECT :
-def CONNECT():
-	# On essaie de se connecter à MySQL avec les infos de variables.py :
-  try:
-    conn = mysql.connector.connect(host=DB_HOST,database=DB_NAME,user=DB_USER,password=DB_USER_PASSWORD)
-    conn.is_connected()
-    conn.close()
-    # Si ca fonctionne on retourne True comme résultat :
-    return(True)
-  # En exception, on attribut les erreurs à la variable ERROR :
-  except Error as ERROR:
-  	# On retourne l'erreur en question :
-    return(ERROR)
-
-
